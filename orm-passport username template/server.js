@@ -5,6 +5,8 @@
 // Dependencies
 // =============================================================
 var express = require("express");
+var passport = require('passport')
+  , LocalStrategy = require('passport-local').Strategy;
 var bodyParser = require("body-parser");
 var exphbs = require('express-handlebars');
 var methodOverride = require('method-override');
@@ -25,6 +27,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+passport.use(new LocalStrategy(
+  function (username, password, done) {
+    User.findOne({ username: username }, function (err, user) {
+      if (err) { return done(err); }
+      if (!user) {
+        return done(null, false, { message: 'Incorrect username.' });
+      }
+      if (!user.validPassword(password)) {
+        return done(null, false, { message: 'Incorrect password.' });
+      }
+      return done(null, user);
+    });
+  }
+));
 
 
 // app.use(express.static("app/public/"));
