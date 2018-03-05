@@ -1,0 +1,29 @@
+body {
+	background-color: #802525;
+	margin-top: 20px;
+}
+
+img, h2 {
+	width: 200px;
+	height: auto;
+	text-align: center;
+	margin-left: 40%;
+	color: rgb(250, 245, 245)
+}
+
+ #create {
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	margin-left: 41%;
+	color: rgb(250, 245, 245)
+}
+
+li, h3 {
+	color: rgb(250, 245, 245);
+}
+
+button {
+	text-align: center;
+	color: #802525;
+}
