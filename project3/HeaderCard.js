@@ -3,65 +3,91 @@ import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import { Header, ButtonGroup, Button, Avatar, List, ListItem, Card, Input, Icon } from 'react-native-elements';
 
 export default class App extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            selectedIndex: 2
-        }
-        this.updateIndex = this.updateIndex.bind(this)
-    }
+constructor () {
+  super()
+  this.state = {
+    selectedIndex: 2
+  }
+  this.updateIndex = this.updateIndex.bind(this)
+}
 
-    updateIndex(selectedIndex) {
-        this.setState({ selectedIndex })
-    }
+updateIndex (selectedIndex) {
+  this.setState({selectedIndex})
+}
 
 
 
-    render() {
-        const buttons = ['Home', 'Past Quest', 'New Quest']
-        const { selectedIndex } = this.state
-        return (
-            <View style={styles.container}>
-                <Card containerStyle={{
-                    flexDirection: 'row', width: "100%",
-                    height: 450, backgroundColor: 'rgba(244, 49,229, 1))',
-                    borderColor: 'rgba(244, 49,229, 1))', justifyContent: 'flex-start',
-                    marginTop: -150
-                }}>
+  render() {
+  const buttons = ['Home', 'Past Quest', 'Next Quest', 'Stats']
+  const { selectedIndex } = this.state
+  const list = [
+  {
+    title: 'Steps',
+    value: '2,867'
+  },
+  {
+    title: 'Distance',
+    value: '1 mile'
+  },
+  {
+    title: 'Elevation',
+    value: '1 mile'
+  },
+  {
+    title: 'Time',
+    value: '30 mins'
+  },
+  {
+    title: 'Avg Speed',
+    value: '10 mph'
+  }
+  
+]
+    return (
+      <View style={styles.container}>
+         <Card containerStyle={{flexDirection: 'row', width: "100%",
+            height: 80, backgroundColor: 'rgba(49, 111,244, 1)',
+            borderColor: 'rgba(49, 111,244, 1)', justifyContent: 'space-around',
+            alignItems: 'stretch', marginTop: 0
+            }}> 
+              <Header
+                  statusBarProps={{ barStyle: 'light-content' }}
+                  centerComponent={{ text: 'FitQuest', style: { color: '#fff',
+                  fontWeight: 'bold', fontSize: 20, marginTop: 15 } }}
+                  outerContainerStyles={{ backgroundColor: 'rgba(49, 111,244, 1)',
+                   flexDirection: 'row', borderColor: 'rgba(49, 111,244, 1)',
+                   width: '100%', justifyContent: 'space-around', alignItems: 'center' }}
+                  innerContainerStyles={{ justifyContent: 'space-between' }}/>
+              
+            </Card>
 
-                <Header
-                    statusBarProps={{ barStyle: 'light-content' }}
-                    leftComponent={{ icon: 'menu', color: '#fff' }}
-                    centerComponent={{ text: 'FitQuest', style: { color: '#fff', fontWeight: 'bold', fontSize: 20 } }}
-                    outerContainerStyles={{ backgroundColor: 'rgba(49, 111,244, 1)', flexDirection: 'row' }}
-                    innerContainerStyles={{ justifyContent: 'space-around' }} />
+            
                 <ButtonGroup
-                    onPress={this.updateIndex}
-                    selectedIndex={selectedIndex}
-                    buttons={buttons}
-                    containerStyle={{
-                        height: 75, width: '100%', backgroundColor: 'rgba(49, 111,244, 1)',
-                        marginTop: -145
-                    }}
-                    textStyle={{ color: 'white', fontWeight: 'bold' }}
+                  onPress={this.updateIndex}
+                  selectedIndex={selectedIndex}
+                  buttons={buttons}
+                  buttonStyle={{justifyContent: 'center', width: '100%'}}
+                  containerStyle={{height: 70, width: '100%',
+                  backgroundColor: 'rgba(49, 111,244, 1)',
+                  justifyContent: 'flex-start', marginTop: 0}}
+                  textStyle={{color: 'white', fontWeight: 'bold'}}
                 />
+  
 
 
+        
 
-                </Card>
-
-
-            </View>
-        );
-    }
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'rgba(244, 49,229, 1))',
-        alignItems: 'center',
-        justifyContent: "space-between"
-
-    }
+  container: {
+    flex: 1,
+    backgroundColor: 'rgba(134, 249, 5, 1))',
+    alignItems: 'center',
+    justifyContent: "flex-start"
+    
+  }
 });

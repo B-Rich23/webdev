@@ -2,7 +2,7 @@ Vibrant Blue:
 backgroundColor: 'rgba(49, 111,244, 1)'
 
 Vibrant Pink:
-backgroundColor: 'rgba(244, 49,229, 1))'
+backgroundColor: 'rgba(244, 49,229, 1)'
 
 Electric Orange:
 
@@ -23,3 +23,7 @@ Vibrant Green:
 Electric Green
 
 134, 249, 5, 1
+
+Vibrant Purple:
+
+182, 44, 250, 1
