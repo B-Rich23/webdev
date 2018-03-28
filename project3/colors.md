@@ -27,3 +27,7 @@ Electric Green
 Vibrant Purple:
 
 182, 44, 250, 1
+
+Turquoise:
+
+44, 244, 250, 1
