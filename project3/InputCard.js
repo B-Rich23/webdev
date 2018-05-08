@@ -28,7 +28,7 @@ class InputHome extends Component {
               style={{
                 fontSize: 30,
                 marginVertical: 10,
-                fontWeight: "300",
+                fontWeight: "bold",
                 marginTop: 30,
                 color: "white"
               }}
@@ -62,7 +62,7 @@ class InputHome extends Component {
                 color: "white",
                 fontSize: 30,
                 marginVertical: 10,
-                fontWeight: "300"
+                fontWeight: "bold"
               }}
             >
               Sign up
