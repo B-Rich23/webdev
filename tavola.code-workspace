@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "tavola"
+		},
+		{
+			"path": "bootcamp/08-week/activities/day-4/12-Blog-CRUD"
+		},
+		{
+			"path": "bootcamp/08-week/activities/day-4/13-Post-Author-Association"
+		},
+		{
+			"path": "bootcamp/08-week/activities/day-4/11-Post-Model"
+		},
+		{
+			"path": "bootcamp/08-week/activities/day-4/14-Post-Author-Joins"
+		},
+		{
+			"path": "bootcamp/08-week/activities/day-4/10-Sequelize-Validations"
+		},
+		{
+			"path": "bootcamp/08-week/activities/day-4/09-Sequelize-Update-Delete"
+		},
+		{
+			"path": "bootcamp/08-week/activities/day-4/08-Sequelize-Create-Read"
+		},
+		{
+			"path": "bootcamp/08-week/activities/day-1/06-HandlebarsAnimals"
+		}
+	],
+	"settings": {}
+}
